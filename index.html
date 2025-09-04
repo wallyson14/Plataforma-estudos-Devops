@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada DevOps</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- COLUNA 1: BARRA LATERAL COM NAVEGAÇÃO E PROGRESSO -->
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <img src="https://raw.githubusercontent.com/lucasmontano/openweathermap-api-icons/main/icons/10d.svg" alt="Logo" class="logo">
+                <h2>Jornada DevOps</h2>
+            </header>
+
+            <div class="total-progress-container">
+                <p>Progresso Total</p>
+                <div class="total-progress-bar">
+                    <div id="total-progress-fill"></div>
+                </div>
+                <span id="total-progress-text">0%</span>
+            </div>
+
+            <p class="nav-title">Módulos</p>
+            <nav class="module-nav">
+                <!-- Links/Ícones dos módulos serão gerados pelo JS -->
+            </nav>
+        </aside>
+
+        <!-- COLUNA 2: CONTEÚDO PRINCIPAL COM OS CARDS DE ACORDEÃO -->
+        <main class="content">
+            <header class="content-header">
+                <h1>Seu Caminho Para a Excelência</h1>
+                <p>Acompanhe seu progresso, módulo por módulo, e construa uma base sólida para se tornar um especialista em DevOps.</p>
+            </header>
+
+            <div id="modules-container">
+                <!-- Módulos em formato de acordeão serão inseridos aqui pelo JS -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
