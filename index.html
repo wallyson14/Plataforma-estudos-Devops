@@ -12,7 +12,7 @@
       <h2>Jornada DevOps</h2>
       <div class="progress-bar">
         <div class="progress" id="progress"></div>
-        <span id="progress-text">56%</span>
+        <span id="progress-text">0%</span>
       </div>
       <ul class="modules">
         <li onclick="showModule('fundamentos')">Fundamentos Essenciais</li>
@@ -29,35 +29,35 @@
       <div id="fundamentos" class="module active">
         <h2>Fundamentos Essenciais</h2>
         <ul class="lessons">
-          <li><input type="checkbox" checked /> Linux CLI</li>
-          <li><input type="checkbox" checked /> Terminal</li>
-          <li><input type="checkbox" checked /> Linux CLI Avançado</li>
-          <li><input type="checkbox" checked /> Redes - Onboarding</li>
-          <li><input type="checkbox" checked /> Repositórios no Git</li>
+          <li><label><input type="checkbox" data-id="fund1" /> Linux CLI</label></li>
+          <li><label><input type="checkbox" data-id="fund2" /> Terminal</label></li>
+          <li><label><input type="checkbox" data-id="fund3" /> Linux CLI Avançado</label></li>
+          <li><label><input type="checkbox" data-id="fund4" /> Redes - Onboarding</label></li>
+          <li><label><input type="checkbox" data-id="fund5" /> Repositórios no Git</label></li>
         </ul>
       </div>
 
       <div id="containers" class="module">
         <h2>Contêineres e Orquestração</h2>
         <ul class="lessons">
-          <li><input type="checkbox" /> Docker: criando containers</li>
-          <li><input type="checkbox" /> Kubernetes: Pods e Services</li>
+          <li><label><input type="checkbox" data-id="cont1" /> Docker: criando containers</label></li>
+          <li><label><input type="checkbox" data-id="cont2" /> Kubernetes: Pods e Services</label></li>
         </ul>
       </div>
 
       <div id="cloud" class="module">
         <h2>Introdução à Nuvem</h2>
         <ul class="lessons">
-          <li><input type="checkbox" /> AWS Cloud Practitioner</li>
-          <li><input type="checkbox" /> Azure Fundamentals</li>
+          <li><label><input type="checkbox" data-id="cloud1" /> AWS Cloud Practitioner</label></li>
+          <li><label><input type="checkbox" data-id="cloud2" /> Azure Fundamentals</label></li>
         </ul>
       </div>
 
       <div id="iac" class="module">
         <h2>Infraestrutura como Código</h2>
         <ul class="lessons">
-          <li><input type="checkbox" /> Ansible: infraestrutura como código</li>
-          <li><input type="checkbox" /> Terraform: separando ambientes</li>
+          <li><label><input type="checkbox" data-id="iac1" /> Ansible: infraestrutura como código</label></li>
+          <li><label><input type="checkbox" data-id="iac2" /> Terraform: separando ambientes</label></li>
         </ul>
       </div>
     </main>
