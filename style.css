@@ -33,8 +33,9 @@ body {
 .progress {
   background-color: #22c55e;
   height: 100%;
-  width: 56%;
+  width: 0%;
   border-radius: 5px;
+  transition: width 0.3s ease;
 }
 
 #progress-text {
