@@ -1,50 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jornada DevOps</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jornada DevOps</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <!-- COLUNA 1: BARRA LATERAL COM NAVEGAÇÃO E PROGRESSO -->
-        <aside class="sidebar">
-            <header class="sidebar-header">
-                <img src="https://raw.githubusercontent.com/lucasmontano/openweathermap-api-icons/main/icons/10d.svg" alt="Logo" class="logo">
-                <h2>Jornada DevOps</h2>
-            </header>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Jornada DevOps</h2>
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+        <span id="progress-text">56%</span>
+      </div>
+      <ul class="modules">
+        <li onclick="showModule('fundamentos')">Fundamentos Essenciais</li>
+        <li onclick="showModule('containers')">Contêineres e Orquestração</li>
+        <li onclick="showModule('cloud')">Introdução à Nuvem</li>
+        <li onclick="showModule('iac')">Infraestrutura como Código</li>
+      </ul>
+    </aside>
 
-            <div class="total-progress-container">
-                <p>Progresso Total</p>
-                <div class="total-progress-bar">
-                    <div id="total-progress-fill"></div>
-                </div>
-                <span id="total-progress-text">0%</span>
-            </div>
+    <main class="content">
+      <h1>Seu Caminho Para a Excelência</h1>
+      <p>Acompanhe seu progresso, módulo por módulo, e construa uma base sólida para se tornar um especialista em DevOps.</p>
 
-            <p class="nav-title">Módulos</p>
-            <nav class="module-nav">
-                <!-- Links/Ícones dos módulos serão gerados pelo JS -->
-            </nav>
-        </aside>
+      <div id="fundamentos" class="module active">
+        <h2>Fundamentos Essenciais</h2>
+        <ul class="lessons">
+          <li><input type="checkbox" checked /> Linux CLI</li>
+          <li><input type="checkbox" checked /> Terminal</li>
+          <li><input type="checkbox" checked /> Linux CLI Avançado</li>
+          <li><input type="checkbox" checked /> Redes - Onboarding</li>
+          <li><input type="checkbox" checked /> Repositórios no Git</li>
+        </ul>
+      </div>
 
-        <!-- COLUNA 2: CONTEÚDO PRINCIPAL COM OS CARDS DE ACORDEÃO -->
-        <main class="content">
-            <header class="content-header">
-                <h1>Seu Caminho Para a Excelência</h1>
-                <p>Acompanhe seu progresso, módulo por módulo, e construa uma base sólida para se tornar um especialista em DevOps.</p>
-            </header>
+      <div id="containers" class="module">
+        <h2>Contêineres e Orquestração</h2>
+        <ul class="lessons">
+          <li><input type="checkbox" /> Docker: criando containers</li>
+          <li><input type="checkbox" /> Kubernetes: Pods e Services</li>
+        </ul>
+      </div>
 
-            <div id="modules-container">
-                <!-- Módulos em formato de acordeão serão inseridos aqui pelo JS -->
-            </div>
-        </main>
-    </div>
+      <div id="cloud" class="module">
+        <h2>Introdução à Nuvem</h2>
+        <ul class="lessons">
+          <li><input type="checkbox" /> AWS Cloud Practitioner</li>
+          <li><input type="checkbox" /> Azure Fundamentals</li>
+        </ul>
+      </div>
 
-    <script src="script.js"></script>
+      <div id="iac" class="module">
+        <h2>Infraestrutura como Código</h2>
+        <ul class="lessons">
+          <li><input type="checkbox" /> Ansible: infraestrutura como código</li>
+          <li><input type="checkbox" /> Terraform: separando ambientes</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
