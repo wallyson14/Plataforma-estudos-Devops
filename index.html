@@ -3,65 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jornada DevOps</title>
+  <title>Jornada DevOps Profissional - Wallyson</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <aside class="sidebar">
-      <h2>Jornada DevOps</h2>
-      <div class="progress-bar">
-        <div class="progress" id="progress"></div>
-        <span id="progress-text">0%</span>
-      </div>
-      <ul class="modules">
-        <li onclick="showModule('fundamentos')">Fundamentos Essenciais</li>
-        <li onclick="showModule('containers')">Contêineres e Orquestração</li>
-        <li onclick="showModule('cloud')">Introdução à Nuvem</li>
-        <li onclick="showModule('iac')">Infraestrutura como Código</li>
-      </ul>
-    </aside>
+  <header>
+    <h1>🚀 Jornada DevOps Profissional - Wallyson</h1>
+    <p>Seu painel completo de aprendizado — do básico ao avançado</p>
+    <div id="overall-progress">
+      <div id="progress-bar"></div>
+    </div>
+    <span id="progress-text">Progresso Total: 0%</span>
+  </header>
 
-    <main class="content">
-      <h1>Seu Caminho Para a Excelência</h1>
-      <p>Acompanhe seu progresso, módulo por módulo, e construa uma base sólida para se tornar um especialista em DevOps.</p>
+  <main id="modules"></main>
 
-      <div id="fundamentos" class="module active">
-        <h2>Fundamentos Essenciais</h2>
-        <ul class="lessons">
-          <li><label><input type="checkbox" data-id="fund1" /> Linux CLI</label></li>
-          <li><label><input type="checkbox" data-id="fund2" /> Terminal</label></li>
-          <li><label><input type="checkbox" data-id="fund3" /> Linux CLI Avançado</label></li>
-          <li><label><input type="checkbox" data-id="fund4" /> Redes - Onboarding</label></li>
-          <li><label><input type="checkbox" data-id="fund5" /> Repositórios no Git</label></li>
-        </ul>
-      </div>
-
-      <div id="containers" class="module">
-        <h2>Contêineres e Orquestração</h2>
-        <ul class="lessons">
-          <li><label><input type="checkbox" data-id="cont1" /> Docker: criando containers</label></li>
-          <li><label><input type="checkbox" data-id="cont2" /> Kubernetes: Pods e Services</label></li>
-        </ul>
-      </div>
-
-      <div id="cloud" class="module">
-        <h2>Introdução à Nuvem</h2>
-        <ul class="lessons">
-          <li><label><input type="checkbox" data-id="cloud1" /> AWS Cloud Practitioner</label></li>
-          <li><label><input type="checkbox" data-id="cloud2" /> Azure Fundamentals</label></li>
-        </ul>
-      </div>
-
-      <div id="iac" class="module">
-        <h2>Infraestrutura como Código</h2>
-        <ul class="lessons">
-          <li><label><input type="checkbox" data-id="iac1" /> Ansible: infraestrutura como código</label></li>
-          <li><label><input type="checkbox" data-id="iac2" /> Terraform: separando ambientes</label></li>
-        </ul>
-      </div>
-    </main>
-  </div>
+  <footer>
+    <p>Desenvolvido por Wallyson — Mentoria DevOps 2025</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
