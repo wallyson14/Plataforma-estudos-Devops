@@ -1,27 +1,45 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jornada DevOps Profissional - Wallyson</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada DevOps - Tracker de Estudos</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  
 </head>
 <body>
-  <header>
-    <h1>🚀 Jornada DevOps Profissional - Wallyson</h1>
-    <p>Seu painel completo de aprendizado — do básico ao avançado</p>
-    <div id="overall-progress">
-      <div id="progress-bar"></div>
+    <div class="container">
+        <header>
+            <h1>🚀 Jornada DevOps - Wallyson</h1>
+            <p class="subtitle">Acompanhe seu progresso rumo a DevOps Júnior e Pleno</p>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-label">Cursos Completados</div>
+                    <div class="stat-number" id="completed-count">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Total de Cursos</div>
+                    <div class="stat-number" id="total-count">126</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Fases Concluídas</div>
+                    <div class="stat-number" id="phases-completed">0/9</div>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%">0%</div>
+            </div>
+
+            <button class="reset-btn" onclick="resetProgress()">🔄 Resetar Progresso</button>
+        </header>
+
+        <div class="phases" id="phases-container"></div>
     </div>
-    <span id="progress-text">Progresso Total: 0%</span>
-  </header>
 
-  <main id="modules"></main>
-
-  <footer>
-    <p>Desenvolvido por Wallyson — Mentoria DevOps 2025</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
