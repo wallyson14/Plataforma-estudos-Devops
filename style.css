@@ -1,150 +1,84 @@
-/* Cole isso no topo do seu style.css */
-:root {
-    --sidebar-width-expanded: 280px;
-    --sidebar-width-collapsed: 80px;
-    
-    /* Paleta "Foco e Tecnologia" */
-    --background: #111827;
-    --surface-1: #1F2937;
-    --surface-2: #374151;
-    --surface-hover: #4B5563; /* Adicionado para hover mais sutil */
-    --border: #374151;
-    --text-primary: #F9FAFB;
-    --text-secondary: #9CA3AF;
-    
-    --accent-primary: #3B82F6;
-    --accent-success: #10B981;
-    --accent-warning: #F59E0B;
-
-    --font-primary: 'Inter', sans-serif;
-    --font-code: 'Roboto Mono', monospace;
-}
-
-/* O resto do seu CSS continua o mesmo, pois ele já usa as variáveis. */
-
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
-    font-family: var(--font-primary);
-    background-color: var(--background);
-    color: var(--text-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f172a;
+  color: #fff;
 }
 
 .container {
-    display: flex;
-    width: 100%;
-    max-width: 1500px;
-    height: 95vh;
-    background-color: var(--surface-1);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  height: 100vh;
 }
 
-/* BARRA LATERAL (SIDEBAR) */
 .sidebar {
-    width: 320px;
-    background-color: var(--surface-1);
-    padding: 24px;
-    border-right: 1px solid var(--border);
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
+  width: 250px;
+  background-color: #1e293b;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.sidebar-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
-.sidebar-header .logo { width: 40px; height: 40px; filter: invert(1); }
-.sidebar-header h2 { font-size: 22px; font-weight: 600; }
-
-.total-progress-container {
-    margin-bottom: 24px;
-    padding: 16px;
-    background-color: var(--surface-2);
-    border-radius: 8px;
+.progress-bar {
+  background-color: #334155;
+  border-radius: 5px;
+  position: relative;
+  height: 20px;
+  margin-bottom: 20px;
 }
 
-.total-progress-container p { font-size: 14px; font-weight: 500; color: var(--text-secondary); margin-bottom: 8px; }
-.total-progress-bar { width: 100%; height: 8px; background-color: var(--surface-hover); border-radius: 4px; overflow: hidden; }
-#total-progress-fill { width: 0%; height: 100%; border-radius: 4px; transition: width 0.5s ease-out; }
-#total-progress-text { display: block; text-align: right; font-size: 14px; font-weight: 600; margin-top: 8px; }
-
-.nav-title { color: var(--text-secondary); font-weight: 500; margin-bottom: 10px; padding: 0 10px; }
-.module-nav { overflow-y: auto; flex-grow: 1; }
-
-.nav-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px;
-    margin-bottom: 4px;
-    text-decoration: none;
-    color: var(--text-secondary);
-    border-radius: 6px;
-    font-weight: 500;
-    transition: background-color 0.2s, color 0.2s;
-    border-left: 4px solid transparent;
+.progress {
+  background-color: #22c55e;
+  height: 100%;
+  width: 56%;
+  border-radius: 5px;
 }
 
-.nav-link:hover { background-color: var(--surface-2); color: var(--text-primary); }
-.nav-link.active { color: var(--text-primary); border-left-color: var(--module-color); }
-.nav-link .nav-icon { width: 20px; height: 20px; flex-shrink: 0; filter: invert(1); }
+#progress-text {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 12px;
+  line-height: 20px;
+}
 
-/* CONTEÚDO PRINCIPAL */
-.content { flex-grow: 1; padding: 40px; overflow-y: auto; }
-.content-header { margin-bottom: 40px; }
-.content-header h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
-.content-header p { font-size: 16px; color: var(--text-secondary); max-width: 600px; }
+.modules {
+  list-style: none;
+  padding: 0;
+}
 
-/* CARDS DOS MÓDULOS (ACORDEÃO) */
+.modules li {
+  margin: 10px 0;
+  cursor: pointer;
+  color: #e2e8f0;
+}
+
+.modules li:hover {
+  color: #38bdf8;
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
 .module {
-    background-color: var(--surface-2);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    border-left: 4px solid var(--module-color);
+  display: none;
 }
 
-.module-header {
-    display: flex; align-items: center; gap: 16px; padding: 20px;
-    cursor: pointer; transition: background-color 0.2s;
+.module.active {
+  display: block;
 }
-.module-header:hover { background-color: var(--surface-hover); }
-.module-icon { width: 32px; height: 32px; flex-shrink: 0; filter: invert(1); }
-.module-title { flex-grow: 1; }
-.module-title h3 { font-size: 18px; font-weight: 600; }
-.module-title p { font-size: 14px; color: var(--text-secondary); font-family: var(--font-code); }
-.module-arrow { font-size: 24px; transition: transform 0.3s ease; }
 
-.module-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out, padding 0.5s ease-out; padding: 0 20px; }
-.module.active .module-content { padding: 0 20px 20px 20px; max-height: 1500px; }
-.module.active .module-arrow { transform: rotate(90deg); }
+.lessons {
+  list-style: none;
+  padding: 0;
+}
 
-/* LISTA DE CURSOS (CHECKLIST) */
-.course-list { list-style: none; border-top: 1px solid var(--border); padding-top: 10px; }
-.course-item { display: flex; align-items: center; padding: 16px 10px; border-bottom: 1px solid var(--border); }
-.course-item:last-child { border-bottom: none; }
-.course-item input[type="checkbox"] {
-    appearance: none; width: 20px; height: 20px; border: 2px solid var(--text-secondary);
-    border-radius: 50%; margin-right: 16px; cursor: pointer; position: relative; flex-shrink: 0;
+.lessons li {
+  margin: 10px 0;
 }
-.course-item input[type="checkbox"]:checked { background-color: var(--module-color); border-color: var(--module-color); }
-.course-item input[type="checkbox"]:checked::before {
-    content: '✔'; font-size: 14px; color: white; position: absolute;
-    top: 50%; left: 50%; transform: translate(-50%, -52%);
-}
-.course-item label { flex-grow: 1; cursor: pointer; font-size: 16px; font-family: var(--font-code); }
-.course-item label.completed { text-decoration: line-through; color: var(--text-secondary); }
